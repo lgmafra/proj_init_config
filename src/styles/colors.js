@@ -8,11 +8,13 @@ export default {
   black: '#000',
 
   primary: '#00bdf2',
-  secondary: '#444a5a',
+  secondary: '#001944',
   success: '#9dca83',
   danger: '#e37a7a',
 
   transparent: 'transparent',
   darkTransparent: 'rgba(0, 0, 0, 0.6)',
   whiteTransparent: 'rgba(255, 255, 255, 0.3)',
+
+  inputBackground: '#efefef',
 };

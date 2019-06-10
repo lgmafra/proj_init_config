@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View, Text, TouchableOpacity, Image, ImageBackground, StatusBar
+  View, Text, TouchableOpacity, Image, ImageBackground, StatusBar,
 } from 'react-native';
 import { useNavigation } from 'react-navigation-hooks';
 
@@ -13,7 +13,7 @@ export default function Intro() {
   const { navigate } = useNavigation();
 
   return (
-    <ImageBackground style={styles.container} source={image}>
+    <ImageBackground style={styles.container} resizeMode="cover" source={image}>
       <StatusBar barStyle="light-content" />
       <View style={styles.textInfo}>
         <Text style={styles.info}>Investimento</Text>
@@ -22,7 +22,7 @@ export default function Intro() {
       </View>
       <Text style={styles.infoLogin}>Faça seu login ou crie sua conta</Text>
       <View style={styles.buttonsPlace}>
-        <TouchableOpacity style={styles.buttonLogin} onPress={() => {}}>
+        <TouchableOpacity style={styles.buttonLogin} onPress={() => navigate('Login')}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonNew} onPress={() => {}}>
