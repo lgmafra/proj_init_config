@@ -4,7 +4,7 @@ import { colors, metrics } from '~/styles';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'stretch',
     padding: metrics.basePadding,
   },
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
     paddingLeft: metrics.basePadding,
     width: 153,
     height: 22,
-    marginTop: metrics.baseMargin * 17,
+    marginTop: metrics.baseMargin * 12,
+    marginBottom: metrics.baseMargin * 11,
   },
 });
 
