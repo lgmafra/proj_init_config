@@ -1,15 +1,37 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import {
+  View, Text, TouchableOpacity, Image, ImageBackground, StatusBar
+} from 'react-native';
+import { useNavigation } from 'react-navigation-hooks';
 
-// import { Container } from './styles';
+import styles from './styles';
+
+import image from '~/images/image.png';
+import logo from '~/images/logo.png';
 
 export default function Intro() {
+  const { navigate } = useNavigation();
+
   return (
-    <View>
-      <Text>Intro</Text>
-      <TouchableOpacity>
-        <Text>Logar</Text>
-      </TouchableOpacity>
-    </View>
+    <ImageBackground style={styles.container} source={image}>
+      <StatusBar barStyle="light-content" />
+      <View style={styles.textInfo}>
+        <Text style={styles.info}>Investimento</Text>
+        <Text style={styles.info}>imobiliário</Text>
+        <Text style={styles.infoBold}>simplificado</Text>
+      </View>
+      <Text style={styles.infoLogin}>Faça seu login ou crie sua conta</Text>
+      <View style={styles.buttonsPlace}>
+        <TouchableOpacity style={styles.buttonLogin} onPress={() => {}}>
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonNew} onPress={() => {}}>
+          <Text style={styles.buttonText}>Criar Conta</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.logo}>
+        <Image source={logo} />
+      </View>
+    </ImageBackground>
   );
 }
