@@ -27,7 +27,7 @@ export default function Intro({ navigation }) {
         >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonNew} onPress={() => {}}>
+        <TouchableOpacity testID="buttonNewAccount" style={styles.buttonNew} onPress={() => {}}>
           <Text style={styles.buttonText}>Criar Conta</Text>
         </TouchableOpacity>
       </View>
